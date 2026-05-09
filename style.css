@@ -776,3 +776,47 @@ audio::-webkit-media-controls-play-button {
     80% { opacity: 1; transform: translateX(-50%) translateY(0); }
     100% { opacity: 0; transform: translateX(-50%) translateY(-50px); visibility: hidden; }
 }
+
+.firework {
+  position: fixed;
+  left: 50vw;
+  top: 20vh;
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  filter: drop-shadow(0 0 16px rgba(255,255,255,0.8));
+  animation: rise 0.8s ease-out forwards;
+  z-index: 9999;
+}
+
+.firework::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 60%);
+  opacity: 0.8;
+}
+
+.particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: hsl(var(--hue), 100%, 65%);
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(10px);
+  animation: explode var(--duration, 1.4s) ease-out forwards;
+}
+
+@keyframes rise {
+  0% { transform: translate(-50%, 0) scale(0.8); opacity: 1; }
+  100% { transform: translate(-50%, -120px) scale(1); opacity: 0.9; }
+}
+
+@keyframes explode {
+  0% { transform: translate(-50%, -50%) rotate(var(--angle)) translateY(10px) scale(0.8); opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(var(--angle)) translateY(var(--distance)) scale(0.2); opacity: 0; }
+}

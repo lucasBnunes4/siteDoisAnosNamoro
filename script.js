@@ -1,3 +1,5 @@
+let comemoracao = false;
+
 // Inicializa AOS
 AOS.init({
   duration: 1000,
@@ -7,8 +9,9 @@ AOS.init({
 
 // Contador de tempo juntos
 function atualizarContador() {
-  const dataInicio = new Date(2024, 5, 6, 17, 30, 0);
+  const dataInicio = new Date(2024, 5, 6, 17, 0, 0);
   const dataAtual = new Date();
+  const dataAlvo = new Date(2026, 5, 6, 17, 0, 0); //data para comemoração
 
   if (isNaN(dataInicio)) {
     console.error("Data inválida!");
@@ -21,9 +24,7 @@ function atualizarContador() {
 
   if (dias < 0) {
     meses--;
-
     const ultimoDiaMesAnterior = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), 0).getDate();
-
     dias = ultimoDiaMesAnterior - dataInicio.getDate() + dataAtual.getDate();
   }
 
@@ -41,6 +42,10 @@ function atualizarContador() {
 
   const diasParaMostrar = dias >= 0 ? dias : 0;
 
+  if (dataAtual >= dataAlvo && !comemoracao) {
+    startFireworks();
+    comemoracao = true;
+  }
 
   document.getElementById('anos').textContent = anos;
   document.getElementById('meses').textContent = meses;
@@ -48,9 +53,43 @@ function atualizarContador() {
   document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
   document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
   document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
-}
-atualizarContador();
 
+  
+}
+
+function startFireworks() {
+  const endTime = Date.now() + 15000; // 15 segundos
+  const interval = setInterval(() => {
+    launchFirework();
+    if (Date.now() >= endTime) {
+      clearInterval(interval);
+    }
+  }, 300);
+}
+
+function launchFirework() {
+  const firework = document.createElement('div');
+  firework.className = 'firework';
+  firework.style.left = Math.random() * 90 + 'vw';
+  firework.style.top = Math.random() * 40 + 'vh';
+  firework.style.setProperty('--hue', Math.floor(Math.random() * 360));
+  firework.style.setProperty('--size', Math.random() * 18 + 12 + 'px');
+
+  for (let i = 0; i < 12; i++) {
+    const particle = document.createElement('span');
+    particle.className = 'particle';
+    particle.style.setProperty('--angle', (360 / 12) * i + 'deg');
+    particle.style.setProperty('--distance', Math.random() * 120 + 100 + 'px');
+    particle.style.animationDuration = 1.2 + Math.random() * 0.8 + 's';
+    firework.appendChild(particle);
+  }
+
+  document.body.appendChild(firework);
+  setTimeout(() => firework.remove(), 1800);
+}
+
+
+atualizarContador();
 setInterval(atualizarContador, 1000);
 
 
@@ -242,15 +281,3 @@ document.querySelectorAll('#menu a').forEach(link => {
 window.addEventListener('scroll', function() {
   document.getElementById('menu').classList.remove('show');
 });
-
-
-
-//variavel para controlar se comemoracao ja foi mostrada hoje
-let comemoracao = false;
-
-//funcao para verificar datas especiais e ativar fogos
-function verificarDatasEspeciais(anos, meses, dias, horas, minutos, segundos) {
-  const hoje = new Date();
-  const dataInicio = new Date(2024, 5, 6, 17, 30, 0);
-  const diffDias = Math.floor((hoje - dataInicio) / (1000 * 60))
-}
