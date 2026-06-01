@@ -98,25 +98,6 @@ const player = document.getElementById('player');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const restartBtn = document.getElementById('restartBtn');
 
-playPauseBtn.addEventListener('click', () => {
-  if (player.paused) {
-    player.play();
-    playPauseBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pausar';
-  } else {
-    player.pause();
-    playPauseBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Tocar';
-  }
-});
-
-restartBtn.addEventListener('click', () => {
-  player.currentTime = 0;
-  player.play();
-  playPauseBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pausar';
-});
-
-player.addEventListener('ended', () => {
-  playPauseBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Tocar';
-});
 
 // Galeria Modal
 let currentImageIndex = 0;
@@ -155,13 +136,146 @@ function changeImage(direction) {
 }
 
 // Fechar modal com ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeModal();
-  } else if (e.key === 'ArrowLeft') {
-    changeImage(-1);
-  } else if (e.key === 'ArrowRight') {
-    changeImage(1);
+// Controle do player de música - VERSÃO ÚNICA E CORRIGIDA
+document.addEventListener('DOMContentLoaded', function() {
+  const player = document.getElementById('player');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const restartBtn = document.getElementById('restartBtn');
+  const muteBtn = document.getElementById('muteBtn');
+  
+  // Variável para controle de estado
+  let isPlaying = false;
+  let isMuted = false;
+
+  if (player && playPauseBtn && restartBtn) {
+    
+    // Função para atualizar o botão play/pause
+    function updatePlayPauseButton() {
+      if (player.paused) {
+        playPauseBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Tocar';
+        isPlaying = false;
+      } else {
+        playPauseBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pausar';
+        isPlaying = true;
+      }
+    }
+
+    // Tentar iniciar o áudio automaticamente
+    function startAutoPlay() {
+      player.play().then(() => {
+        console.log('✅ Música iniciada automaticamente');
+        updatePlayPauseButton();
+      }).catch(error => {
+        console.log('⚠️ Autoplay bloqueado. Clique em qualquer lugar para iniciar...');
+        updatePlayPauseButton();
+        
+        // Se o autoplay for bloqueado, iniciar na primeira interação
+        const startOnClick = () => {
+          player.play().then(() => {
+            console.log('✅ Música iniciada após interação');
+            updatePlayPauseButton();
+          }).catch(err => {
+            console.log('❌ Erro ao iniciar música:', err);
+          });
+          document.removeEventListener('click', startOnClick);
+        };
+        
+        document.addEventListener('click', startOnClick, { once: true });
+      });
+    }
+
+    // Play/Pause - CORRIGIDO
+    playPauseBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevenir comportamento padrão
+      
+      if (player.paused) {
+        player.play().then(() => {
+          updatePlayPauseButton();
+        }).catch(err => {
+          console.log('❌ Erro ao tocar:', err);
+        });
+      } else {
+        player.pause();
+        updatePlayPauseButton();
+      }
+    });
+
+    // Reiniciar
+    restartBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      player.currentTime = 0;
+      player.play().then(() => {
+        updatePlayPauseButton();
+      }).catch(err => {
+        console.log('❌ Erro ao reiniciar:', err);
+      });
+    });
+
+    // Mute/Unmute
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        isMuted = !isMuted;
+        player.muted = isMuted;
+        
+        if (isMuted) {
+          muteBtn.innerHTML = '<i class="fas fa-volume-mute mr-2"></i> Mudo';
+          muteBtn.classList.add('bg-gray-500');
+          muteBtn.classList.remove('bg-pink-500');
+        } else {
+          muteBtn.innerHTML = '<i class="fas fa-volume-up mr-2"></i> Som';
+          muteBtn.classList.add('bg-pink-500');
+          muteBtn.classList.remove('bg-gray-500');
+        }
+      });
+    }
+
+    // Monitorar eventos do player
+    player.addEventListener('play', () => {
+      updatePlayPauseButton();
+    });
+
+    player.addEventListener('pause', () => {
+      updatePlayPauseButton();
+    });
+
+    player.addEventListener('ended', () => {
+      updatePlayPauseButton();
+      console.log('Música terminou (loop ativo)');
+    });
+
+    // Quando os metadados carregarem
+    player.addEventListener('loadedmetadata', () => {
+      console.log('✅ Metadados do áudio carregados');
+      startAutoPlay();
+    });
+
+    player.addEventListener('error', (e) => {
+      console.error('❌ Erro ao carregar áudio:', e);
+      
+      // Mostrar mensagem amigável
+      const errorMsg = document.createElement('div');
+      errorMsg.style.cssText = `
+        background: rgba(255,0,0,0.2);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+      `;
+      errorMsg.textContent = '⚠️ Música não encontrada. Verifique o arquivo: ./audio/musica.mp3';
+      
+      player.parentElement.appendChild(errorMsg);
+      
+      setTimeout(() => errorMsg.remove(), 5000);
+    });
+
+    // Garantir que o loop está ativo
+    player.loop = true;
+    
+    // Estado inicial do botão
+    updatePlayPauseButton();
   }
 });
 
