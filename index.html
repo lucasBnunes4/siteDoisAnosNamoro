@@ -104,37 +104,19 @@
   <!-- Seção Sobre Nós -->
   <section id="sobre" class="py-20">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Sobre Lele e Lulu</h2>
+      <h2 class="section-title" data-aos="fade-up">De Lulu para Lele</h2>
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
-          <img src="C:\Users\Lucas Nunes\Pictures\eu e lele\shopping1.jpg" alt="Casal" class="img-fluid rounded-3xl shadow-2xl">
+          <img src="C:\Users\Lucas Nunes\Pictures\eu e lele\diaMaisimportante2.jpeg" alt="Casal" class="img-fluid rounded-3xl shadow-2xl">
         </div>
         <div class="col-lg-6" data-aos="fade-left">
           <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-lg">
-            <h3 class="text-3xl mb-4">Começo de Lele e Lulu</h3>
-            <p class="text-lg mb-4">Entre conversas que começaram dois anos antes, 
-              conheci o amor da minha vida no dia 25 de abril de 2024.
+            <h3 class="text-3xl mb-4">Meu presente para Lele</h3>
+            <p class="text-lg mb-4">Mozinho, fiz essa página para guardar nossas memórias de dois anos. 
+              Foram dois anos muito bem vividos ao seu lado, cada segundo foi incrível.
             </p>
-            <p class="text-lg mb-4">Naquele dia, saí com uma mulher linda — uma verdadeira “gatinha”. 
-              Tivemos um encontro simples, com um lanche e uma conversa leve, daquelas que fluem naturalmente. 
-              E, no final, aconteceu algo que até hoje me faz sorrir: ela mesma tomou a iniciativa e pediu um beijo (porque era meio lerdo kkkkk).
-            </p>
-            <p class="text-lg mb-4">Depois disso, nossas conversas só se intensificaram. 
-              A cada dia, eu conhecia um pouco mais dela — e me encantava ainda mais.
-            </p>
-            <p class="text-lg mb-4">
-              No dia 1º de maio de 2024, fomos pela primeira vez à Rural… e nunca mais paramos. 
-              No dia seguinte, ela me chamou para sair de novo, e aquilo foi, sem dúvida, uma das melhores coisas que poderiam ter acontecido. 
-              A partir dali, começou a melhor fase da minha vida. Eu só queria estar com ela o tempo todo, dividir cada momento, cada risada, cada experiência.
-            </p>
-            <p class="text-lg mb-4">
-              Fomos ao shopping, incontáveis vezes ao Lago do IA, ela conheceu meus amigos… e, no meio de tudo isso, meu sentimento só crescia.
-            </p>
-            <p class="text-lg mb-4">
-              Até que, no dia 6 de junho de 2024, tomei a melhor decisão que poderia tomar: pedi a minha gatinha em namoro.
-            </p>
-            <p class="text-lg mb-4">
-              E desde então, o resto a melhor história de amor vem sendo escrita...
+            <p class="text-lg mb-4">Aqui contém algumas das centenas de fotos e lembranças, "são muitas kkkkk". Espero que goste e 
+              aproveite esse presente hehehe. Te amuuuu minha gatinha 💜🧡
             </p>
             <div class="row g-4 mt-4">
               <div class="col-6 text-center">
@@ -154,31 +136,37 @@
 
   <!-- Player de Música Melhorado -->
   <section id="playlist" class="py-20">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Nossa Trilha Sonora</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="music-player bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-lg" data-aos="zoom-in">
-            <div class="text-center mb-6">
-              <i class="fas fa-music text-5xl text-orange-400"></i>
-              <h3 class="text-2xl mt-4">Nossa Música Especial</h3>
-            </div>
-            <audio id="player" controls class="w-full">
-              <source src="\audio\musica.mp3" type="audio/mp3">
-            </audio>
-            <div class="flex justify-center gap-4 mt-6">
-              <button id="playPauseBtn" class="px-6 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition flex items-center">
-                <i class="fas fa-play mr-2"></i> Tocar
-              </button>
-              <button id="restartBtn" class="px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-600 transition flex items-center">
-                <i class="fas fa-undo-alt mr-2"></i> Reiniciar
-              </button>
-            </div>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Nossa Trilha Sonora</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="music-player bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-lg" data-aos="zoom-in">
+          <div class="text-center mb-6">
+            <i class="fas fa-music text-5xl text-orange-400"></i>
+            <h3 class="text-2xl mt-4">Nossa Música Especial</h3>
+            <p class="text-sm opacity-75 mt-2">🎵 Tocando automaticamente em loop</p>
+          </div>
+          <!-- Adicionar os atributos autoplay e loop -->
+          <audio id="player" controls class="w-full" autoplay loop>
+            <source src="./audio/musica.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+          <div class="flex justify-center gap-4 mt-6">
+            <button id="playPauseBtn" class="px-6 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition flex items-center">
+              <i class="fas fa-pause mr-2"></i> Pausar
+            </button>
+            <button id="restartBtn" class="px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-600 transition flex items-center">
+              <i class="fas fa-undo-alt mr-2"></i> Reiniciar
+            </button>
+            <button id="muteBtn" class="px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition flex items-center">
+              <i class="fas fa-volume-up mr-2"></i> Som
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Linha do Tempo Aprimorada -->
   <section id="timeline" class="py-20">
@@ -188,40 +176,222 @@
         
         <div class="timeline-item" data-aos="fade-right">
           <div class="timeline-content">
-            <div class="timeline-date">09 Mar 2022</div>
-            <h4>Primeiro Encontro</h4>
-            <p>Foi mágico, cheio de risadas e olhares que diziam mais que palavras.</p>
+            <div class="timeline-date">25 de Abril de 2024</div>
+
+            <div class="timeline-floating-photo">
+      <img src="./img/ilhaGrande2.jpg" alt="Primeiro Encontro">
+    </div>
+
+            <h4>PRIMEIRO ENCONTRO.</h4>
+            <p>Foi a primeira vez que eu vi minha Lele. No início fiquei um pouco nervoso, mas depois conhecendo
+              minha aquela mulher incrível, foi um dos melhoes dias da minha vida.
+            </p>
             <i class="fas fa-heart timeline-icon"></i>
           </div>
         </div>
         
         <div class="timeline-item" data-aos="fade-left">
           <div class="timeline-content">
-            <div class="timeline-date">15 Jun 2022</div>
-            <h4>Primeiro "Eu Te Amo"</h4>
-            <p>Um momento inesquecível que selou ainda mais nosso amor.</p>
+
+            <div class="timeline-floating-photo">
+      <img src="./img/1.JPEG" alt="Primeiro Encontro">
+    </div>
+            <div class="timeline-date">5 de Maio de 2024</div>
+            <h4>PRIMEIRO POR DO SOL DE INÚMEROS QUE VIMOS E IREMOS VER.</h4>
+            <p>Esse dia foi muito especial meu amor, te busquei em casa e fomos na Rural assistir, talvez
+              o por do sol mais bonito que já vi, pois foi o primeiro ao seu lado.
+            </p>
             <i class="fas fa-heart timeline-icon"></i>
           </div>
         </div>
         
         <div class="timeline-item" data-aos="fade-right">
           <div class="timeline-content">
-            <div class="timeline-date">20 Dez 2022</div>
-            <h4>Primeiro Natal Juntos</h4>
-            <p>Celebramos o amor e a família, criando memórias para sempre.</p>
+            <div class="timeline-date">18 de Maio de 2024</div>
+
+            <div class="timeline-floating-photo">
+      <img src="./img/shopping1.jpg" alt="Primeiro Encontro">
+    </div>
+
+            <h4>PRIMEIRO SHOPPING JUNTOS</h4>
+            <p>Poderia ser a coisa mais boba do mundo, mas esse dia foi muito especial mozinho. Embarcou nas 
+              minhas lovuras e foi para Volta Redonda de moto comigo.
+            </p>
             <i class="fas fa-heart timeline-icon"></i>
           </div>
         </div>
         
         <div class="timeline-item" data-aos="fade-left">
           <div class="timeline-content">
-            <div class="timeline-date">09 Mar 2024</div>
-            <h4>2 Anos de Amor</h4>
-            <p>Celebramos mais um ano de cumplicidade e sonhos compartilhados.</p>
+
+            <div class="timeline-floating-photo">
+      <img src="./img/3.JPEG" alt="Primeiro Encontro">
+    </div>
+
+
+            <div class="timeline-date">22 de Maio de 2024</div>
+            <h4>PRIMEIRA VEZ VENDO VASCÃO COMIGO</h4>
+            <p>Desde o início meu mozinho já entendia minhas loucuras hehe</p>
             <i class="fas fa-heart timeline-icon"></i>
           </div>
         </div>
-      </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content">
+
+            <div class="timeline-floating-photo">
+      <img src="./img/diaMaisimportante2.jpeg" alt="Primeiro Encontro">
+    </div>
+
+
+            <div class="timeline-date">6 de Junho de 2024</div>
+            <h4>O DIA MAIS IMPORTANTES DE TODOS</h4>
+            <p>Depois de tantos pores do sol esse foi o mais importante. Foi uma das melhores sensações que já senti 
+              mozinho, um frio na barriga que não consigo explicar, mas quando te pedi em namoro e você aceitou
+              foi uma das maiores alegrias de já senti. Te amo tanto meu amor, que é até dificil explicar!!
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content">
+
+            <div class="timeline-floating-photo">
+      <img src="./img/4.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">7 de Junho de 2024</div>
+            <h4>CONHECENDO OS SOGRINHOS HEHE.</h4>
+            <p>Sentir você nervosa, mas ao mesmo tempo tão disposta a fazer isso por a gente mo, te amuuuu!!.</p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content">
+
+            <div class="timeline-floating-photo">
+      <img src="./img/5.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">12 de Junho de 2024</div>
+            <h4>PRIMEIRO DIA DOS NAMORADOS JUNTOS.</h4>
+            <p>Jantarzinho que fizemos, diliça e date duplo com os sogrinhos kkkkkk
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/6.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">13 de Junho de 2024</div>
+            <h4>PRIMEIRO JANTAR ROMÂNTICO.</h4>
+            <p>Primeiro restaurante juntos e foi logo um MasterChef, não que a comida estava maravilhosa, mas a companhia
+              era perfeita.
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+            
+            <div class="timeline-floating-photo">
+      <img src="./img/7.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">21 de Julho de 2024</div>
+            <h4>PRIMEIRA "TRILHA".</h4>
+            <p>Estavamos em tere pela primeira vez e a minha teresopolisiense me levou no parque hehehe
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/8.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">3 de Agosto de 2024</div>
+            <h4>PRIMEIRA PRAIA.</h4>
+            <p>Agora minha nikitiense me levou para a praia hehe, lá no sossego. E ainda conheci Bia
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/fotinha.jpeg" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">8 de Setembro de 2024</div>
+            <h4>CAFÉ DA MANHÃ.</h4>
+            <p>Lembra daquele café da Carol amiga de Marcelle. E nao esquece que foi feita a melhor figurinhas de todas.
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/9.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">26 de Setembro de 2024</div>
+            <h4>PRIMEIRO CASAMENTO JUNTOS.</h4>
+            <p>Fomos no casamento de Karla e ficamos lindos juntos hehe, mas minha gatinha estava deslumbrante e usando redley igual eu kkkkk
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/primeiroAnoNovo.jpeg" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">31 de Dezembro de 2024</div>
+            <h4>PRIMEIRO ANO NOVO JUNTOS.</h4>
+            <p>Esse foi o melhor ano novo de todos, pois foi ao lado da mulher que eu amo e sempre amarei.
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content"> 
+
+            <div class="timeline-floating-photo">
+      <img src="./img/semanarural.JPEG" alt="Primeiro Encontro">
+    </div>
+
+            <div class="timeline-date">PARA SEMPRE</div>
+            <h4>LELE E LULU</h4>
+            <p>Meu amor, sei que não coloquei aqui todos nossos momentos especiais. Não coloquei todos, pois ia ter 
+              que descrever cada dia ao seu lado, por que é dessa forma, todos os dias ao seu lado são mais que 
+              especiais. Obrigado por cada momento meu amor!!
+            </p>
+            <i class="fas fa-heart timeline-icon"></i>
+          </div>
+        </div>
+
+
     </div>
   </section>
 
@@ -233,10 +403,10 @@
         
         <div class="col-lg-4 col-md-6" data-aos="flip-left">
           <div class="travel-card">
-            <img src="viagem1.jpg" alt="Viagem 1" class="travel-img">
+            <img src="./img/tere0.JPEG" alt="Viagem 1" class="travel-img">
             <div class="travel-content">
-              <h4>Praia dos Amores</h4>
-              <p>Janeiro 2023</p>
+              <h4>Primeira Vez em Tere</h4>
+              <p>Junho 2024</p>
               <span class="badge bg-orange-500">Primeira viagem</span>
             </div>
           </div>
@@ -244,25 +414,137 @@
         
         <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
           <div class="travel-card">
-            <img src="viagem2.jpg" alt="Viagem 2" class="travel-img">
+            <img src="./img/nit0.JPEG" alt="Viagem 2" class="travel-img">
             <div class="travel-content">
-              <h4>Serra da Estrela</h4>
-              <p>Julho 2023</p>
-              <span class="badge bg-purple-500">Inesquecível</span>
+              <h4>Primeira Vez em Nikiti</h4>
+              <p>Agosto 2024</p>
+              <span class="badge bg-purple-500">Primeira Praia</span>
             </div>
           </div>
         </div>
         
         <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
           <div class="travel-card">
-            <img src="viagem3.jpg" alt="Viagem 3" class="travel-img">
+            <img src="./img/floripa1.jpeg" alt="Viagem 3" class="travel-img">
             <div class="travel-content">
-              <h4>Cidade Luz</h4>
-              <p>Dezembro 2023</p>
-              <span class="badge bg-pink-500">Romântico</span>
+              <h4>Floripa</h4>
+              <p>Outubro 2024</p>
+              <span class="badge bg-pink-500">Inesquecível</span>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left">
+          <div class="travel-card">
+            <img src="./img/tiradentes1.jpg" alt="Viagem 1" class="travel-img">
+            <div class="travel-content">
+              <h4>Tiradentes</h4>
+              <p>Janeiro 2025</p>
+              <span class="badge bg-orange-500">Histórico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+          <div class="travel-card">
+            <img src="./img/primeiraVezSP1.jpeg" alt="Viagem 2" class="travel-img">
+            <div class="travel-content">
+              <h4>São Paulo</h4>
+              <p>Fevereiro 2025</p>
+              <span class="badge bg-purple-500">Animal</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
+          <div class="travel-card">
+            <img src="./img/marambaia2.jpg" alt="Viagem 3" class="travel-img">
+            <div class="travel-content">
+              <h4>Marambaia</h4>
+              <p>Fevereiro/Março 2025</p>
+              <span class="badge bg-pink-500">Inovador</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left">
+          <div class="travel-card">
+            <img src="./img/ilhaGrande1.jpg" alt="Viagem 1" class="travel-img">
+            <div class="travel-content">
+              <h4>Ilha Grande</h4>
+              <p>Maio 2025</p>
+              <span class="badge bg-orange-500">Inovador</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+          <div class="travel-card">
+            <img src="./img/friburgo1.JPEG" alt="Viagem 2" class="travel-img">
+            <div class="travel-content">
+              <h4>Nova Friburgo</h4>
+              <p>Junho 2025</p>
+              <span class="badge bg-purple-500">1 ANO COM O AMOR DA MINHA VIDA</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
+          <div class="travel-card">
+            <img src="./img/maua1.jpeg" alt="Viagem 3" class="travel-img">
+            <div class="travel-content">
+              <h4>Máua</h4>
+              <p>Agosto 2025</p>
+              <span class="badge bg-pink-500">Frio HEHE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left">
+          <div class="travel-card">
+            <img src="./img/paraty1.JPEG" alt="Viagem 1" class="travel-img">
+            <div class="travel-content">
+              <h4>Paraty Parte 1</h4>
+              <p>Janeiro 2026</p>
+              <span class="badge bg-orange-500">Sonho era levar Lele lá</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+          <div class="travel-card">
+            <img src="./img/sp2.JPEG" alt="Viagem 2" class="travel-img">
+            <div class="travel-content">
+              <h4>São Paulo Parte 2</h4>
+              <p>Fevereiro 2026</p>
+              <span class="badge bg-purple-500">1 ANO COM O AMOR DA MINHA VIDA</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
+          <div class="travel-card">
+            <img src="./img/rioOpen.jpeg" alt="Viagem 3" class="travel-img">
+            <div class="travel-content">
+              <h4>Rio Open 2026</h4>
+              <p>Fevereiro 2026</p>
+              <span class="badge bg-pink-500">Loucuras do de Lulu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
+          <div class="travel-card">
+            <img src="./img/segundaVezParaty.jpeg" alt="Viagem 3" class="travel-img">
+            <div class="travel-content">
+              <h4>Paraty Parte 2</h4>
+              <p>Fevereiro 2026</p>
+              <span class="badge bg-pink-500">Inesquecível</span>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -274,28 +556,169 @@
       <div class="row g-4 gallery-grid">
         
         <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
-          <div class="gallery-card" onclick="openModal(0)">
-            <img src="foto1.jpg" alt="Memória 1" class="gallery-img">
+          <div class="gallery-card">
+            <img src="./img/diaMaisimportante2.jpeg" alt="Memória 1" class="gallery-img">
             <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
             </div>
           </div>
         </div>
         
         <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-card" onclick="openModal(1)">
-            <img src="foto2.jpg" alt="Memória 2" class="gallery-img">
+          <div class="gallery-card">
+            <img src="./img/casamentoKarla.jpg" alt="Memória 2" class="gallery-img">
             <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
             </div>
           </div>
         </div>
         
         <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
-          <div class="gallery-card" onclick="openModal(2)">
-            <img src="foto3.jpg" alt="Memória 3" class="gallery-img">
+          <div class="gallery-card">
+            <img src="./img/casamentoTh2.jpg" alt="Memória 3" class="gallery-img">
             <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/familia.jpg" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/maua.jpeg" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/nit0.JPEG" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/ilhaGrande1.jpg" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/marambaia1.jpg" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/priemeiraVezTere.jpg" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/primeiroDiaDosNamorados.jpeg" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/tiradentes2.jpg" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/umAno1.jpeg" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/RIW.jpeg" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/primeiroAnoNovo.jpeg" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/floripa.jpg" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/frioDeTere.jpeg" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/fotinha.jpeg" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/comChule.jpeg" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img src="./img/semanarural.JPEG" alt="Memória 1" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img src="./img/leleparaty.JPEG" alt="Memória 2" class="gallery-img">
+            <div class="gallery-overlay">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-card">
+            <img src="./img/leletere.JPEG" alt="Memória 3" class="gallery-img">
+            <div class="gallery-overlay">
             </div>
           </div>
         </div>
@@ -317,35 +740,34 @@
   <!-- Seção de Cartinhas -->
   <section id="cartas" class="py-20">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Cartinhas de Amor</h2>
+      <h2 class="section-title" data-aos="fade-up">Cartinha Para Minha Gatinha</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="letters-container">
             
             <div class="letter-card" data-aos="fade-up">
-              <div class="letter-header" onclick="toggleLetter(1)">
-                <h4>Para meu amor 💜</h4>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="letter-content" id="letter1">
-                <p>Meu amor,</p>
-                <p>Hoje completamos 2 anos de uma história linda que construímos juntos. Lembro como se fosse ontem do dia em que nos conhecemos, e desde então, você ilumina meus dias com seu sorriso.</p>
-                <p>Obrigado por cada momento, cada risada, cada abraço apertado. Você é a melhor coisa que me aconteceu.</p>
-                <p class="text-right">Te amo infinito, Lulu 🧡</p>
-              </div>
-            </div>
+    <div class="letter-header" onclick="toggleLetter(1)">
+        <h4>Para meu amor 💜</h4>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="letter-content" id="letter1">
+        <p>Meu amor,</p>
+        
+        <p>Estamos completando mais um ano de muitos que virão. Passar minha vida com você é um privilégio, cada momento com você faz a vida ser mais leve e amável.</p>
+        
+        <p>Sei que nem sempre a vida é fácil, a faculdade está aí para nos mostrar, problemas entre a gente também. Porém quando estou com você sei que tudo irá dar certo, pois caminhamos juntos, nos entendemos e sempre nos apoiamos para chegar no mesmo lugar, que é viver juntos para sempre.</p>
+        
+        <p>Te agradeço amor, por simplesmente ser você, a melhor pessoa que eu conheço. Uma mulher que me apoia, me ajuda e nos momentos mais difíceis está ao meu lado.</p>
+        
+        <p>Além de agradecer meu amor, eu te admiro. Você é a pessoa mais forte que eu conheço, mesmo com faculdade, casa, um milhão de coisas para fazer, mas você não desiste nem deixa eu desistir. Além disso, você me ajuda mesmo quando nem pensa em ajudar, pois posso até pensar em desistir porém não posso desistir porque faço por mim e principalmente por você meu amor, minha inspiração.</p>
+        
+        <p>Eu simplesmente te agradeço mozinho, agradeço por ser essa mulher inspiradora, amável, fiel, incrível e maravilhosa. Agradeço por me amar e sempre estar ao meu lado, agradeço por ser minha Lele!</p>
+        
+        <p class="text-right">TE AMOOOO DE MUITOO, MEU MOZINHO 🧡</p>
+    </div>
+</div>
             
-            <div class="letter-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="letter-header" onclick="toggleLetter(2)">
-                <h4>Para meu princeso 💜</h4>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="letter-content" id="letter2">
-                <p>Meu amor,</p>
-                <p>Cada dia ao seu lado é especial. Você me faz tão feliz! Obrigada por todo carinho, cuidado e amor. Que venham muitos e muitos anos pela frente.</p>
-                <p class="text-right">Te amo mais que tudo, Lele 🧡</p>
-              </div>
-            </div>
+            
             
           </div>
         </div>
@@ -362,8 +784,8 @@
         <div class="col-md-4" data-aos="flip-right">
           <div class="dream-card">
             <i class="fas fa-home text-5xl text-orange-400 mb-4"></i>
-            <h4>Nossa Casa</h4>
-            <p>Construir nosso lar, nosso cantinho especial</p>
+            <h4>Nossa Fazenda</h4>
+            <p>Construir nosso lar, nosso cantinho especial. Nossa fazenda cheia de bixinhos e quadra de tenis hehe</p>
           </div>
         </div>
         
@@ -371,7 +793,7 @@
           <div class="dream-card">
             <i class="fas fa-globe-americas text-5xl text-orange-400 mb-4"></i>
             <h4>Viajar o Mundo</h4>
-            <p>Conhecer novos lugares juntos</p>
+            <p>Conhecer novos lugares juntos, uma tal de Islândia aí</p>
           </div>
         </div>
         
@@ -379,7 +801,7 @@
           <div class="dream-card">
             <i class="fas fa-heart text-5xl text-orange-400 mb-4"></i>
             <h4>Envelhecer Juntos</h4>
-            <p>Celebrar cada ano ao seu lado</p>
+            <p>Celebrar cada ano ao seu lado e vivir cada década, ano, mês, dia, hora, minito e segundo ao seu lado meu amor!</p>
           </div>
         </div>
         
@@ -394,12 +816,7 @@
         <i class="fas fa-heart text-4xl text-orange-400 animate-pulse"></i>
       </div>
       <p class="text-lg mb-4">2 anos de muito amor, cumplicidade e felicidade</p>
-      <p class="mb-4">09/03/2022 - 09/03/2024</p>
-      <div class="social-links mb-4">
-        <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#" class="text-white mx-2"><i class="fab fa-spotify fa-2x"></i></a>
-        <a href="#" class="text-white mx-2"><i class="fab fa-whatsapp fa-2x"></i></a>
-      </div>
+      <p class="mb-4">06/06/2024 - para sempre</p>
       <p class="opacity-75">Com amor, eternamente Lele & Lulu 💜🧡</p>
     </div>
   </footer>
